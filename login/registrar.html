@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+        <form id="registerForm" action="registro.php" method="post">
+            <label for="txtnombre">Nombre:</label>
+            <input type="text" id="txtnombre" name="txtnombre" required>
+            <br>
+            <label for="txtusuario">E-mail:</label>
+            <input type="text" id="txtusuario" name="txtusuario" required>
+            <br>
+            <label for="txtpassword">Contraseña:</label>
+            <input type="password" id="txtpassword" name="txtpassword" required>
+            <br>
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+    <script src="registro.js"></script>
+</body>
+</html>

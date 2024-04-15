@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DISTOP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Script PHP -->
+         
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.php">Info</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="list.php">List Users</a></li>
+                    <li><a href="add.php">Add Users</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <h2>DISTOP</h2>
+                <p>LA AYUDA IDEAL PARA TU TRASLADO  <a href="http://html5up.net"></a></p>
+            </div>
+        </section>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <!-- One -->
+            <section id="one" class="wrapper spotlight style1">
+                <div class="inner">
+                    <a href="#" class="image"><img src="images/imagen1.jpg" alt="" /></a>
+                    <div class="content">
+                        <h2 class="major">MISION</h2>
+                        <p>Somos un grupo que busca facilidad para personas discapacitadas, además buscamos integrar a un campo profesional un diseño de una parada de camión, de esta manera se beneficiara mas población y que hará más idóneo su tiempo de traslado. Queremos llegar a trabajar con gente del estado y país para llegar a los rincones mas necesitados por estas personas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <a href="#" class="image"><img src="images/Imagen2.jpg" alt="" /></a>
+                    <div class="content">
+                        <h2 class="major">Visión</h2>
+                        <p>Queremos colaborar en distintos municipios y participar de forma proactiva en las acciones de mejora continua, también realizar un análisis el cual de resultados sobre el dictamen para crear condiciones favorables para los usuarios. Con esto, buscaremos llegar a otros lugares que necesiten de nuestra ayuda para implementar zonas adecuadas para personas con discapacidad.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Three -->
+            <section id="three" class="wrapper spotlight style3">
+                <div class="inner">
+                    <a href="#" class="image"><img src="images/Imagen3.jpg" alt="" /></a>
+                    <div class="content">
+                        <h2 class="major">Descripción</h2>
+                        <p>Este producto y servicio ayudara a gente discapacitada que sale de sus casas sin tener un coche privado. Estara diseñada para su comodidad y seguridad, ademas que generara nuevas oportunidades para salir a este porciento de población que existe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Four -->
+            <section id="four" class="wrapper alt style1">
+                <div class="inner">
+                    <h2 class="major">Caracteristicas</h2>
+                    <p></p>
+                    <section class="features">
+                        <article>
+                            <a href="#" class="image"><img src="images/imagen4.jpg" alt="" /></a>
+                            <h3 class="major">Sistema Braille</h3>
+                            <p>Implementacion el sistema Braille en la parada de autobus para facilitar la interaccion de personas ciegas.</p>
+                        </article>
+                        <article>
+                            <a href="#" class="image"><img src="images/imagen5.jpg" alt="" /></a>
+                            <h3 class="major">Bocinas y Pantalla</h3>
+                            <p>Sonido e imagen listo para facilitar la vida de aquellos desgraciados y desdichados en esta vida para que puedan seguir usando el transporte publico y puedan saber la llegada del camion.</p>
+                        </article>
+                    </section>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Inicio</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Footer -->
+        <ul class="contact">
+            <li class="icon solid fa-home">
+                Universidad Tecnologica de Santa Catarina<br />
+                Carr. Monterrey - Saltillo Km. 61.5, <br />
+                Bosques de Santa Catarina, 66359 Santa Catarina, N.L.
+            </li>
+            <li class="icon solid fa-phone">+52 1 81 1376 0458</li>
+            <li class="icon solid fa-envelope"><a href="#">pedro_serna25@outlook.es</a></li>
+            <li class="icon brands fa-twitter"><a href="#">@Distop</a></li>
+            <li class="icon brands fa-facebook-f"><a href="#">Pedri Alv, Orlando Salas</a></li>
+            <li class="icon brands fa-instagram"><a href="#">Pedrialv</a></li>
+        </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script JavaScript -->
+    <script>
+         // Realizar una solicitud AJAX al servidor para obtener la información de sesión
+        $.ajax({
+            url: 'pagina.php',
+            method: 'GET',
+            success: function(response) {
+                var sesion = JSON.parse(response);
+                if (sesion.nombre) {
+                    // Si hay un nombre de usuario en la sesión, mostrar el mensaje de bienvenida
+                    alert('Bienvenido, ' + sesion.nombre + '!');
+                }
+                else {
+                    	window.location.href = 'login2.html';
+                    }
+                
+            }
+        });
+	         // Manejar el evento unload para cerrar la sesión cuando el usuario abandona la página
+	  		window.addEventListener('unload', function() {
+	        	// Realizar una solicitud AJAX al servidor para cerrar la sesión
+	       		$.ajax({
+	            	url: 'cerrar_sesion.php',
+	           	 	method: 'GET',
+	            	success: function(response) {
+	                console.log('Sesión cerrada exitosamente');
+	            },
+	            	error: function(xhr, status, error) {
+	                console.error('Error al cerrar la sesión:', error);
+	            }
+        	});
+   		});
+
+
+	  	var urlParams = new URLSearchParams(window.location.search);
+        var error = urlParams.get('error');
+        
+        // Si hay un parámetro de error, mostrar una alerta
+        if (error === 'no-admin') {
+            alert('Quien tu ere, tu no ere admin');
+        }
+
+    </script>
+</body>
+</html>
