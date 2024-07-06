@@ -3,10 +3,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "test1";
+$dbhost = "db";
+$dbuser = "mariadb";
+$dbpass = "mariadb";
+$dbname = "mariadb";
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (!$conn) {

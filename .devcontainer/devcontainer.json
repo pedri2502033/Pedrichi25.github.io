@@ -27,7 +27,9 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			"extensions": [
-				"ikappas.composer"
+				"ikappas.composer",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-mysql"
 			]
 		}
 	}
