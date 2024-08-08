@@ -5,9 +5,11 @@ session_start();
 // Verificar si hay una sesión iniciada y si el usuario es administrador
 if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'administrador') {
     // Si el usuario no es administrador, redirigir a otra página (por ejemplo, index.php)
-    header('Location: index.html?error=no-admin');
-    alert('Tu no ere admin');
-    exit(); // Detener la ejecución del script después de redirigir
+    echo "<script>
+            alert('Tu no eres admin');
+            window.location.href = 'index.html?error=no-admin';
+          </script>";
+    exit(); 
 }
 
 require_once 'config.php';
