@@ -2,6 +2,8 @@
 <?php
 session_start();
 
+echo 'Rol de sesión: ' . (isset($_SESSION['rol']) ? $_SESSION['rol'] : 'No definido');
+
 // Verificar si hay una sesión iniciada y si el usuario es administrador
 if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'administrador') {
     // Si el usuario no es administrador, redirigir a otra página (por ejemplo, index.php)
