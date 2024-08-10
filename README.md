@@ -3,5 +3,5 @@
 apache2ctl start para que arranque 
 ```
 ```shell
-como ya tenemos el init sql ya nomas le dass run 
+Paso 2 ejecutamos el archivo init.sql
 ```
